@@ -1,1 +1,4 @@
-print("I am a snake")
+from board import Board
+
+
+Board(size=30).print()
