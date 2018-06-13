@@ -2,11 +2,17 @@ from os import system, name
 
 
 class Board:
-    def __init__(self, size=15):
+    def __init__(self, size=15, snake=[], fruits=[]):
         self._size = size
         self._field = self.get_field(self._size)
-        self._snake = [[x, 3] for x in range(4, 10)] + [[9, y] for y in range(4, 7)]
-        self._fruits = [[0, 1], [7, 5], [10, 23]]
+        self._snake = snake
+        self._fruits = fruits
+
+    def set_snake(self, snake):
+        self._snake = snake
+
+    def set_fruits(self, fruits):
+        self._fruits = fruits
 
     @staticmethod
     def get_field(size):
