@@ -47,6 +47,10 @@ while key != 27:
             food = [randint(1, 18), randint(1, 58)]
             if food in snake: food = []
         win.addch(food[0], food[1], '@')
+    else:
+        last = snake.pop()
+        win.addch(last[0], last[1], ' ')
+
 
     win.addch(snake[0][0], snake[0][1], '*')
 
